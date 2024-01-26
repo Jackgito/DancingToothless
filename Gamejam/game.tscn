@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx7bqvou4ck6i"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_y2q8w"]
+[ext_resource type="PackedScene" uid="uid://ck8vsbw3iqmgi" path="res://video_stream_player.tscn" id="2_v20a0"]
+[ext_resource type="PackedScene" uid="uid://bsmj5ovweahrw" path="res://videoContainer.tscn" id="3_iwp8a"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_y2q8w")
+
+[node name="VideoStreamPlayer" parent="." instance=ExtResource("2_v20a0")]
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 230.0
+offset_bottom = 462.0
+autoplay = true
+expand = true
+
+[node name="Control" parent="VideoStreamPlayer" instance=ExtResource("3_iwp8a")]
+custom_minimum_size = Vector2(500, 800)
+offset_right = 500.0
+offset_bottom = 800.0
+rotation = 2.83791
