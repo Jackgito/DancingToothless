@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpovnrrln5mst"]
+
+[ext_resource type="Script" path="res://scripts/ArrowTimer.gd" id="1_4fc0m"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_4fc0m")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

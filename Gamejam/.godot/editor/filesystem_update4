@@ -1,0 +1,10 @@
+res://tscn/game.tscn
+res://tscn/arrows/Arrow.tscn
+res://tscn/arrows/arrowLeft.tscn
+res://scripts/Arrow.gd
+res://scripts/ArrowTimer.gd
+res://scripts/arrowLeft.gd
+res://scripts/Singleton.gd
+res://Singleton.gd
+res://tscn/singleton.tscn
+res://tscn/arrows/ArrowSpawner.tscn

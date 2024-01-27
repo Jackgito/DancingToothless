@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3p10vetcqygb"]
+
+[ext_resource type="AudioStream" uid="uid://ds0nvf076sqa6" path="res://assets/driftVeilCity.ogg" id="1_npaoa"]
+
+[node name="musicPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_npaoa")
+volume_db = -9.0
+autoplay = true

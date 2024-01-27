@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://mwtqvnndtsyo"]
+
+[ext_resource type="Script" path="res://scripts/arrowRight.gd" id="1_jnx6b"]
+[ext_resource type="Texture2D" uid="uid://baonua00n01h" path="res://assets/arrowRight.png" id="2_cgb30"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gt22"]
+atlas = ExtResource("2_cgb30")
+region = Rect2(0, 0, 72, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_navbk"]
+atlas = ExtResource("2_cgb30")
+region = Rect2(0, 81, 72, 81)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cckow"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gt22")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_navbk")
+}],
+"loop": true,
+"name": &"pressKey",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_jnx6b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cckow")
+animation = &"pressKey"

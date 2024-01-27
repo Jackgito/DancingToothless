@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cskmsiccena5c"]
+
+[node name="Toothless" type="CharacterBody2D"]
