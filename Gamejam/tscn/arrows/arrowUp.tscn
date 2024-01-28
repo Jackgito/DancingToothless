@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cxm1oapnengy4"]
+[gd_scene load_steps=7 format=3 uid="uid://cxm1oapnengy4"]
 
 [ext_resource type="Script" path="res://scripts/arrowUp.gd" id="1_nxyu6"]
 [ext_resource type="Texture2D" uid="uid://do1m3pbykilv6" path="res://assets/arrowUp.png" id="2_3uplf"]
@@ -25,9 +25,16 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u14kn"]
+size = Vector2(20, 50)
+
+[node name="Node2D" type="Area2D"]
 script = ExtResource("1_nxyu6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cckow")
 animation = &"pressKey"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_u14kn")

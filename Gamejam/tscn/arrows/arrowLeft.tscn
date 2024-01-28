@@ -1,78 +1,42 @@
-[gd_scene load_steps=9 format=3 uid="uid://buqs1vmr3ygv7"]
+[gd_scene load_steps=7 format=3 uid="uid://buqs1vmr3ygv7"]
 
 [ext_resource type="Script" path="res://scripts/arrowLeft.gd" id="2_bf67r"]
 [ext_resource type="Texture2D" uid="uid://teqdt8jayd6d" path="res://assets/arrowLeft.png" id="2_hm5l6"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dply8"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y1bdm"]
+size = Vector2(20, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgypb"]
 atlas = ExtResource("2_hm5l6")
 region = Rect2(0, 0, 72, 81)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yyt1b"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmhhu"]
 atlas = ExtResource("2_hm5l6")
 region = Rect2(0, 81, 72, 81)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_jes8u"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_3pivo"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dply8")
+"texture": SubResource("AtlasTexture_rgypb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yyt1b")
+"texture": SubResource("AtlasTexture_gmhhu")
 }],
 "loop": true,
 "name": &"pressKey",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nntmt"]
-size = Vector2(20, 30)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_shl8n"]
-size = Vector2(10, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6xdv"]
-size = Vector2(30, 40)
-
-[node name="ArrowButton" type="AnimatedSprite2D"]
+[node name="Area2D" type="Area2D"]
 position = Vector2(0, -3)
-sprite_frames = SubResource("SpriteFrames_jes8u")
-animation = &"pressKey"
 script = ExtResource("2_bf67r")
 
-[node name="Perfect" type="Node2D" parent="."]
-position = Vector2(0, 3)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_y1bdm")
 
-[node name="FlippedOk" type="Node2D" parent="Perfect"]
-position = Vector2(0, 16)
-
-[node name="FlippedGood" type="Node2D" parent="Perfect"]
-position = Vector2(0, 8)
-
-[node name="Ok" type="Node2D" parent="Perfect"]
-position = Vector2(0, -16)
-
-[node name="Good" type="Node2D" parent="Perfect"]
-position = Vector2(0, -8)
-
-[node name="GoodArea" type="Area2D" parent="."]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GoodArea"]
-visible = false
-shape = SubResource("RectangleShape2D_nntmt")
-
-[node name="PerfectArea" type="Area2D" parent="."]
-unique_name_in_owner = true
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PerfectArea"]
-visible = false
-shape = SubResource("RectangleShape2D_shl8n")
-
-[node name="OkArea" type="Area2D" parent="."]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="OkArea"]
-visible = false
-shape = SubResource("RectangleShape2D_n6xdv")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_3pivo")
+animation = &"pressKey"

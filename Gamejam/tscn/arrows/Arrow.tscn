@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dxlf8w8hkr8lq" path="res://assets/arrow.png" id="1_3cgp0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvq6r"]
-size = Vector2(16, 44)
+size = Vector2(30, 30)
 
-[node name="Arrow" type="Area2D"]
+[node name="StaticBody2D" type="CharacterBody2D"]
 top_level = true
 script = ExtResource("1_0i2nf")
 

@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpovnrrln5mst"]
+[gd_scene load_steps=3 format=3 uid="uid://dpovnrrln5mst"]
 
 [ext_resource type="Script" path="res://scripts/ArrowTimer.gd" id="1_4fc0m"]
+[ext_resource type="Script" path="res://tscn/arrows/Timer.gd" id="2_vjrik"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_4fc0m")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+script = ExtResource("2_vjrik")

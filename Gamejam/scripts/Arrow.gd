@@ -1,9 +1,7 @@
-# Arrow.gd (script attached to the Arrow node)
+extends CharacterBody2D
 
-extends Area2D
-
-var speed = 300  # Adjust the speed of the arrow
-
+var speed = 350  # Adjust the speed of the arrow
+var time = 0
 func _process(delta):
 	position.y += speed * delta
 
@@ -11,7 +9,7 @@ func _process(delta):
 	if position.y > get_viewport_rect().size.y + 100:
 		queue_free()
 		
-func _on_Arrow_body_entered(body: Area2D) -> void:
-	
-		print("DELETE")
-		queue_free()
+	#time += delta
+		#
+	#if position.y > 644 and position.y < 648:
+		#print(time)

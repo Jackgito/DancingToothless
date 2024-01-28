@@ -3,6 +3,7 @@ extends Node2D
 var arrow_scene = preload("res://tscn/arrows/Arrow.tscn")
 var colors = [Color.GREEN, Color.RED, Color.BLUE, Color.YELLOW]
 var arrowRotation = [90, 0, -180, -90]
+#var noteJumpDistance = 2.15 # Approximately
 
 func _ready():
 	# Connect the timer timeout signal to the spawn_arrow function
@@ -26,8 +27,6 @@ func spawn_arrow():
 
 func set_arrow_properties(arrow):
 	var arrow_index = randi() % 4
-	var direction = arrow_index as GlobalSingleton.ArrowDirection
-	GlobalSingleton.storeArrow(direction, arrow)
 	
 	# Choose a random color from the colors array
 	var arrow_color = colors[arrow_index]
